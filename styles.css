@@ -887,4 +887,11 @@ input[type="range"]::-moz-range-thumb {
     flex-direction: column;
     text-align: center;
   }
+
+  .installment-value {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
 }
