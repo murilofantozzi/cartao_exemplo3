@@ -4,7 +4,22 @@
   box-sizing: border-box;
 }
 
+/* Variáveis de Cores */
 :root {
+  --primary-color: #164c70;
+  /* Verde esmeralda para destaque */
+  --secondary-color: #3498db;
+  /* Azul para contraste (não usado na imagem, mas bom ter) */
+  --text-color: #333;
+  --light-text-color: #7f8c8d;
+  --background-color: #f4f7f9;
+  /* Fundo levemente azulado */
+  --card-background: #ffffff;
+  --result-box-background: #e6fff3;
+  /* Fundo verde claro para a caixa de resultado */
+  --border-color: #ecf0f1;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
   --primary: #2563eb;
   --secondary: #f97316;
   --background: #ffffff;
@@ -141,11 +156,9 @@ body {
 /* Hero Section */
 .hero {
   padding: 80px 0;
-  background: linear-gradient(
-    135deg,
-    rgba(37, 99, 235, 0.05) 0%,
-    rgba(249, 115, 22, 0.05) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(37, 99, 235, 0.05) 0%,
+      rgba(249, 115, 22, 0.05) 100%);
 }
 
 .hero-content {
@@ -548,7 +561,7 @@ section h2 {
   margin-bottom: 16px;
 }
 
-.cta > .container > p {
+.cta>.container>p {
   font-size: 18px;
   margin-bottom: 30px;
   opacity: 0.95;
@@ -685,6 +698,180 @@ section h2 {
 
 .social-links a:hover {
   color: white;
+}
+
+.simulator {
+  padding: 5rem 2rem;
+  /* background: #f9fafb; */
+  /* margin-top: 90px; */
+  /* AJUSTE IDEAL */
+}
+
+.simulator-container {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  /* CENTRALIZA EM MOBILE */
+}
+
+/* Cartão do Simulador */
+.simulator-card {
+  /* background-color: var(--card-background); */
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  padding: 0;
+}
+
+/* Cabeçalho */
+.simulator-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.simulator-header .title {
+  color: var(--primary-color);
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.simulator-header .subtitle {
+  color: var(--light-text-color);
+  font-size: 0.9em;
+}
+
+/* Seções de Input */
+.input-section {
+  margin-bottom: 30px;
+  padding: 40px;
+}
+
+.input-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.input-header .icon {
+  color: var(--primary-color);
+  font-size: 1.1em;
+  margin-right: 10px;
+}
+
+.input-header .label {
+  color: var(--text-color);
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.input-header .current-value {
+  color: var(--primary-color);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Estilo do Range Slider */
+input[type="range"] {
+  /* -webkit-appearance: none; */
+  width: 100%;
+  height: 5px;
+  background: var(--border-color);
+  border-radius: 5px;
+  margin: 10px 0;
+  outline: none;
+  transition: opacity .2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.range-limits {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  color: var(--light-text-color);
+}
+
+/* Seção de Resultado */
+.result-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 50px;
+}
+
+.result-box {
+  background-color: var(--result-box-background);
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.result-label {
+  color: var(--primary-color);
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.installment-value {
+  color: var(--primary-color);
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.installment-details {
+  color: var(--light-text-color);
+  font-size: 0.9em;
+}
+
+/* Rodapé */
+.simulator-footer {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-item {
+  text-align: center;
+}
+
+.footer-label {
+  color: var(--light-text-color);
+  font-size: 0.8em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer-value {
+  color: var(--text-color);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.footer-item:last-child .footer-value {
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
