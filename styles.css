@@ -700,10 +700,11 @@ section h2 {
   color: white;
 }
 
+
 .simulator {
   padding: 5rem 2rem;
-  /* background: #f9fafb; */
-  /* margin-top: 90px; */
+  background: #f9fafb;
+  margin-top: 90px;
   /* AJUSTE IDEAL */
 }
 
@@ -716,10 +717,10 @@ section h2 {
 
 /* Cartão do Simulador */
 .simulator-card {
-  /* background-color: var(--card-background); */
+  background-color: var(--card-background);
   border-radius: 15px;
   box-shadow: var(--shadow);
-  padding: 0;
+  padding: 30px;
 }
 
 /* Cabeçalho */
@@ -743,7 +744,6 @@ section h2 {
 /* Seções de Input */
 .input-section {
   margin-bottom: 30px;
-  padding: 40px;
 }
 
 .input-header {
@@ -815,7 +815,6 @@ input[type="range"]::-moz-range-thumb {
 .result-section {
   margin-top: 30px;
   margin-bottom: 30px;
-  padding: 50px;
 }
 
 .result-box {

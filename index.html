@@ -108,7 +108,7 @@
         </div>
 
         <!-- Simulador -->
-        <section class="simulator" id="simulator">
+        <div class="simulator" id="simulator">
           <div class="simulator-container">
             <div class="simulator-card">
               <header class="simulator-header">
@@ -127,26 +127,28 @@
                 <input
                   type="range"
                   id="total-value-range"
-                  min="100"
-                  max="10000"
-                  value="2500"
+                  min="1000"
+                  max="50000"
                   step="100"
+                  value="15000"
                   oninput="updateSimulator()"
                 />
-                <span id="total-value-display"></span>
-                <span>R$ 1.000,00</span>
-                <span>R$ 50.000,00</span>
-
-                <input
-                  type="range"
-                  id="installments-range"
-                  min="1"
-                  max="12"
-                  value="6"
-                  oninput="updateSimulator()"
-                />
-                <span id="installments-display">6x</span>
+                <div class="range-limits">
+                  <span>R$ 1.000,00</span>
+                  <span>R$ 50.000,00</span>
+                </div>
               </div>
+
+              <input
+                type="range"
+                id="installments-range"
+                min="1"
+                max="12"
+                value="6"
+                oninput="updateSimulator()"
+              />
+              <span id="installments-display">6x</span>
+
               <div class="result-section">
                 <div class="result-box">
                   <p class="result-label">VALOR DE CADA PARCELA</p>
@@ -157,13 +159,11 @@
                     0x de R$ 0,00
                   </p>
                 </div>
-                <button style="margin: 10%" class="btn btn-primary">
-                  Enviar
-                </button>
               </div>
+              <button class="btn-primary">Enviar</button>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </section>
 
